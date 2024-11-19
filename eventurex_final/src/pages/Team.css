@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #495057;
+  }
+  
+  /* Main Container for Team Page */
+  .team-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #6c5ce7;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .team-form {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #6c5ce7;
+    outline: none;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  .add-member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .add-member input {
+    width: 70%;
+  }
+  
+  .add-member-button {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-member-button:hover {
+    background-color: #5a47b4;
+  }
+  
+  /* Team Members List */
+  .team-members-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .team-member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+  
+  .remove-member-button {
+    background-color: #f64c72;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .remove-member-button:hover {
+    background-color: #d52b57;
+  }
+  
+  /* Submit Button */
+  .create-team-button {
+    background-color: #00b894;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+  }
+  
+  .create-team-button:hover {
+    background-color: #00a57a;
+  }
+  

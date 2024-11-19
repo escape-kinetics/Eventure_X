@@ -1,0 +1,26 @@
+/* src/App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure body and html take full height */
+}
+
+.body {
+  background-image: url('./eventmanagement-background.png'); /* Add your background image */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-repeat: no-repeat; /* Prevent tiling of the image */
+  background-position: center; /* Center the image */
+  min-height: 100vh; /* Ensure it covers the full viewport */
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif; /* Optional: Consistent font */
+  color: #fff; /* Optional: White text for contrast */
+}
+
+.content {
+  flex: 1; /* Makes the content area fill the remaining space */
+  padding: 20px; /* Optional: Add spacing inside the content */
+}
+
+

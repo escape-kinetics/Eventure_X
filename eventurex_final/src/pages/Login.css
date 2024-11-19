@@ -1,0 +1,108 @@
+/* src/pages/Login.css */
+
+/* Button Styles */
+.login-button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Container Styles */
+.container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  background-color: #ffffff; /* White background for a clean look */
+  font-family: 'Roboto', sans-serif; /* Clean modern font */
+  color: #333;
+  animation: fadeIn 1s ease-out; /* Fade-in animation */
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #007BFF; /* Blue color for the heading */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  animation: slideIn 1s ease-out; /* Slide-in animation for the heading */
+}
+
+/* Input Field Styles */
+/* Input Field Styles */
+input {
+  padding: 8px 15px;  /* Reduced padding */
+  font-size: 14px;     /* Smaller font size */
+  width: 100%;         /* Ensures the input spans full width but remains smaller */
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Focus effect on input fields */
+input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Slide-in animation for the heading */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); /* Starts a little left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Ends at normal position */
+  }
+}
+
+/* Fade-in animation for container */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Starts a little above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at normal position */
+  }
+}
+
+/* Global Styles */
+body {
+  background-color: #f4f7fa; /* Light grey background for a clean and neutral look */
+  font-family: 'Roboto', sans-serif; /* Clean and modern font for the body */
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional Link Styles (if you have them) */
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
