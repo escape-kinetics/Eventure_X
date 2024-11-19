@@ -1,6 +1,6 @@
 // src/pages/About.js
 import React from 'react';
-import './About.css'; // External CSS for better styling control
+//import './About.css'; // External CSS for better styling control
 
 function About() {
   return (

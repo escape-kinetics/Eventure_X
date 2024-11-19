@@ -5,9 +5,7 @@ const Schema = mongoose.Schema;
 const teamSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
-  members: [{ type: Schema.Types.ObjectId, ref: 'User' }],  // Reference to User model (for team members)
-  eventId: { type: Schema.Types.ObjectId, ref: 'Event', required: true },  // Reference to Event model
-  createdAt: { type: Date, default: Date.now }
+  members: {type: String, required: true  }
 });
 
 // Create the Team model

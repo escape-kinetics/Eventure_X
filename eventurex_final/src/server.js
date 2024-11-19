@@ -18,7 +18,7 @@ const eventsDb = mongoose.createConnection("mongodb://127.0.0.1:27017/events", {
   useUnifiedTopology: true,
 });
 
-const teamsDb = mongoose.createConnection("mongodb://127.0.0.1:27017/teams", {
+const teamsDb = mongoose.createConnection("mongodb://127.0.0.1:27017/team", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -113,42 +113,21 @@ app.get("/user/:userId/events", (req, res) => {
 
 
 // In your server.js
-app.post("/team/create", async (req, res) => {
-  const { name, description, userId, eventId } = req.body;
-
-  try {
-    const newTeam = new Team({
-      name,
-      description,
-      creatorId: userId,
-      eventId,
-    });
-
-    await newTeam.save();
-    res.status(201).json({ message: "Team created successfully!" });
-  } catch (err) {
-    console.error("Error creating team:", err);
-    res.status(500).json({ message: "Error creating team, please try again." });
-  }
+app.post("/team", (req, res) => {
+  TeamModel.create(req.body)
+    .then((teams) => res.json(teams))
+    .catch((err) => res.json(err));
 });
+
+app.post("/team", (req, res) => {
+  TeamModel.create(req.body)
+    .then((team) => res.json(team))
+    .catch((err) => res.json(err));
+});
+
 
 
 // Fetch all teams for an event
-app.get('/event/:eventId/teams', async (req, res) => {
-  const { eventId } = req.params;
-
-  try {
-    // Find teams associated with the given event ID
-    const teams = await Team.find({ eventId })
-      .populate('members', 'name email') // Populate the members' details
-      .populate('eventId', 'name description'); // Populate event details
-
-    res.status(200).json(teams);
-  } catch (error) {
-    console.error("Error fetching teams:", error);
-    res.status(500).json({ message: 'Server error while fetching teams' });
-  }
-});
 
 // Server listen
 
